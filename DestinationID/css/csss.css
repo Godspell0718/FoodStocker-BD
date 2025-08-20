@@ -1,0 +1,20 @@
+tr, td, th{
+    border: solid 1px gray;
+    padding: 20px;
+    
+}
+
+table{
+    margin: auto;
+    
+}
+
+.tablafacil{
+    width: 1200px;;
+}
+.tabladura{
+    width: 298px;
+}
+.paracentrar{
+    text-align: center;
+}

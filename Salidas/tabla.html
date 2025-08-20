@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStocker DB</title>
+    <link rel="stylesheet" href="/TABLAS_PROYECTO/TABLAS_PROYECTO/tablasBD/css.css">
+</head>
+
+
+
+<nav id="menu">
+    <ul>
+        <li>
+            <a href="../Ingresos/Ingresos.html" class="menu-item">Ingresos</a>
+        </li>
+        <li>
+            <a href="../Productos/Productos.html" class="menu-item">Insumos</a>
+        </li>
+        <li>
+            <a href="../Salidas/tabla.html" class="menu-item">Salidas</a>
+        </li>
+        <li>
+            <a href="../Personas/Personas.html" class="menu-item">Usuario</a>
+        </li>
+        <li>
+            <a href="/TABLAS_PROYECTO/TABLAS_PROYECTO/tablasBD/DestinationID/DestinationID.html"
+                class="menu-item">Destination</a>
+        </li>
+        <li>
+            <a href="/TABLAS_PROYECTO/TABLAS_PROYECTO/tablasBD/Almacen/Almacen.html" class="menu-item">Almacen</a>
+        </li>
+    </ul>
+</nav>
+<div>
+    <h1>
+        Diccionario de Base de datos de FOODSTOCKER
+    </h1>
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th colspan="2">Diccionario de base de datos de FoodStocker</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Nombre</td>
+            <td class="tablafacil">Salidas</td>
+        </tr>
+        <tr>
+            <td>creación</td>
+            <td class="tablafacil">30/07/2025</td>
+        </tr>
+        <tr>
+            <td>Descripción</td>
+            <td class="tablafacil">Registro de salidas de insumos de agroindustria</td>
+        </tr>
+
+    </table>
+
+    <body>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo de dato</th>
+                    <th>Tamaño</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> ExitID</td>
+                    <td>INT</td>
+                    <td>10</td>
+                    <td>es el identificador unico del insumo de salida</td>
+                </tr>
+                <tr>
+                    <td>ProductID</td>
+                    <td>INT</td>
+                    <td>10</td>
+                    <td>es el identificador unico del insumo</td>
+                </tr>
+                <tr>
+                    <td>UnitID</td>
+                    <td>INT</td>
+                    <td>10</td>
+                    <td>Es la unidad de destino</td>
+                </tr>
+                <tr>
+                    <td>UserID</td>
+                    <td>INT</td>
+                    <td>10</td>
+                    <td>Es la persona que se encarga de retirar el insumo</td>
+                </tr>
+                <tr>
+                    <td>ExitDate</td>
+                    <td>TIMESTAMP</td>
+                    <td>1</td>
+                    <td>Representa el momento exacto en que sale o se da uso al insumo</td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td>SMALLINT</td>
+                    <td>100</td>
+                    <td>Es la cantidad de insumos que se estan retirando</td>
+                </tr>
+                <tr>
+                    <td>observations</td>
+                    <td>VARCHAR</td>
+                    <td>500</td>
+                    <td>Son las observaciones que se tengan del insumo retirado</td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="js/js.js"></script>
+    </body>
+</div>
+
+</html>
