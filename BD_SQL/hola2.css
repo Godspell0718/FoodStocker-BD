@@ -46,7 +46,9 @@ body {
     position: absolute;
     top: 100%;   
     left: 0;     
+
     background: linear-gradient(90deg, #007bff, #0056b3);
+    background: #f9f9f9;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -67,6 +69,7 @@ body {
     top: 0;       
     left: 100%;   
     background: linear-gradient(90deg, #007bff, #0056b3);
+    background: #f9f9f9;
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
@@ -83,6 +86,7 @@ body {
     display: block;
     padding: 10px 16px;
     color: #f0f2f5;
+    color: #000;
     text-decoration: none;
     
 }
@@ -91,6 +95,7 @@ body {
 #menu ul li ul li a:hover {
     background: #007bff;
     color: #ffcc00;
+    color: #fff;
 }
 
 .container {

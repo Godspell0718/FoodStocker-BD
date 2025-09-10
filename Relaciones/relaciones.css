@@ -15,6 +15,9 @@ nav#menu {
      background: linear-gradient(90deg, #007bff, #0056b3);
     padding: 10px 0;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    background-color: blue;
+    padding: 10px 0;
+    margin-bottom: 20px;
 }
 
 nav#menu ul {
