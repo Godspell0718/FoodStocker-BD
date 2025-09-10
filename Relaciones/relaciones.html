@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodStocker DB</title>
-    <link rel="stylesheet" href="../css.css">
+    <link rel="stylesheet" href="relaciones.css">
 </head>
 
 
 <nav id="menu">
-   <ul>
+    <ul>
         <li>
-            <a href="../Inicio/index.html" class="menu-item" >Principal</a>
+            <a href="../Inicio/index.html" class="menu-item">Principal</a>
 
         </li>
         <li>
@@ -38,14 +38,32 @@
         </li>
     </ul>
 </nav>
-<div>
-    <body>
 
-        <img src="/img/WhatsApp Image 2025-09-03 at 7.53.16 AM.jpeg" alt="">
-        <img src="/img/WhatsApp Image 2025-09-03 at 7.53.34 AM.jpeg" alt="">
-        <img src="/img/WhatsApp Image 2025-09-03 at 7.53.38 AM.jpeg" alt="">
-        <img src="/img/WhatsApp Image 2025-09-03 at 7.53.39 AM.jpeg" alt="">
-    </body>
-</div>
+<body>
+
+    <div>
+        <h2 style='margin: auto;'>relaciones</h2>
+    </div>
+    <div>
+        <img src="../img/DestinoSalidas.jpeg" id="imagen">
+    </div>
+
+    <div>
+        <button onclick="cambiarimg(1)" id="destinoSalidas"><img src="../img/DestinoSalidas.jpeg"id="botondestinoSalidas"></button>
+        <button onclick="cambiarimg(2)" id="entradasAlmacen"><img src="../img/EntradasAlmacen.jpeg"id="botonentradasAlmacen"></button>
+        <button onclick="cambiarimg(3)" id="insumoEntradas"><img src="../img/InsumoEntradas.jpeg"id="botoninsumoEntradas"></button>
+        <button onclick="cambiarimg(4)" id="usuarioSalidas"><img src="../img/UsuarioSalidas.jpeg"id="botonusuarioSalidas"></button>
+    </div>
+    <div>
+        <h1 id="animal">Relacion destino salidas</h1>
+    </div>
+    <div id="anteriorSiguiente">
+        <button onclick="botones('L')" id="anterior"><img src="/img/flechaIzquierda.png"></button>
+        <button onclick="botones('R')" id="siguiente"><img src="/img/flechaDerecha.png"> </button>
+    </div>
+
+    <script src="/Relaciones/relaciones.js"></script>
+</body>
+
 
 </html>

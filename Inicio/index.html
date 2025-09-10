@@ -11,33 +11,56 @@
 <body>
 
     <nav id="menu">
-        <ul>
-            <li>
-                <a href="../Inicio/index.html" class="menu-item">Principal</a>
-            </li>
-            <li>
-                <a href="../Ingresos/Ingresos.html" class="menu-item">Ingresos</a>
-            </li>
-            <li>
-                <a href="../Productos/Productos.html" class="menu-item">Insumos</a>
-            </li>
-            <li>
-                <a href="../Salidas/tabla.html" class="menu-item">Salidas</a>
-            </li>
-            <li>
-                <a href="../Personas/Personas.html" class="menu-item">Usuario</a>
-            </li>
-            <li>
-                <a href="../DestinationID/DestinationID.html" class="menu-item">Destination</a>
-            </li>
-            <li>
-                <a href="../Almacen/Almacen.html" class="menu-item">Almacen</a>
-            </li>
-            <li>
-                <a href="../Relaciones/relaciones.html" class="menu-item">Relaciones</a>
-            </li>
-        </ul>
-    </nav>
+            <ul>
+                <li>
+                    <a href="../Inicio/index.html" class="menu-item">Principal</a>
+                </li>
+                <li>
+                    <a href="../Ingresos/Ingresos.html" class="menu-item">Ingresos</a>
+                </li>
+                <li>
+                    <a href="../Productos/Productos.html" class="menu-item">Insumos</a>
+                </li>
+                <li>
+                    <a href="../Salidas/tabla.html" class="menu-item">Salidas</a>
+                </li>
+                <li>
+                    <a href="../Personas/Personas.html" class="menu-item">Usuario</a>
+                </li>
+                <li>
+                    <a href="../DestinationID/DestinationID.html" class="menu-item">Destination</a>
+                </li>
+                <li>
+                    <a href="../Almacen/Almacen.html" class="menu-item">Almacen</a>
+                </li>
+                <li>
+                    <a href="../Relaciones/relaciones.html" class="menu-item">Relaciones</a>
+                </li>
+                <li><a class="menu-item">Motores de BD</a>
+                    <ul class="subMenu">
+                        <li>
+                            BD Relacional
+                            <ul class="subMenuDos">
+                                <li><a href="/BD_SQL/mysql.html">MySQL</a></li>
+                                <li><a href="/BD_SQL/postgre.html">PostgreSQL</a></li>
+                                <li><a href="/BD_SQL/Oracle.html">Oracle Database</a></li>
+                                <li><a href="/BD_SQL/mariaDB.html">MariaDB</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            BD No Relacional
+                            <ul class="subMenuDos">
+                                <li><a href="/BDNoSQL/mongodb.html">MongoDB</a></li>
+                                <li><a href="/BDNoSQL/cassandra.html">Cassandra</a></li>
+                                <li><a href="/BDNoSQL/couch.html">CouchDB</a></li>
+                                <li><a href="/BDNoSQL/redis.html">Redis</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     <div class="container">
         <h1>Bienvenido al Gestor de Base de Datos</h1>
     </div>
@@ -47,24 +70,64 @@
         AQUI RESPONDEREMOS LAS SIGUIENTES PREGUNTAS:
     </h4>
 
-    <h3>¿Qué es un gestor de base de datos y cuál es su función?</h3>
-    <h3>¿Qué es un motor de base de datos y cuál es su función?</h3>
+    <h3>¿Qué es un gestor y motor de base de datos y cuál es su función?</h3>
+
 
     </p>
     <aside>
-        ¿Qué es un gestor de base de datos y cuál es su función?
+        <h3>¿Qué es un gestor de base de datos y cuál es su función?</h3>
         <p>Un gestor de base de datos (DBMS, por sus siglas en inglés) es un software que permite crear, gestionar y
             manipular bases de datos. Su función principal es proporcionar una interfaz para que los usuarios puedan
             interactuar con los datos almacenados, facilitando tareas como la creación, lectura, actualización y
             eliminación de datos (CRUD). Además, un DBMS se encarga de garantizar la integridad, seguridad y
             consistencia de los datos, así como de gestionar el acceso concurrente por múltiples usuarios.</p>
-        ¿Qué es un motor de base de datos y cuál es su función?
+        <h3>¿Qué es un motor de base de datos y cuál es su función?</h3>
         <p>Un motor de base de datos es el componente central de un sistema de gestión de bases de datos (DBMS) que se
             encarga de ejecutar las operaciones relacionadas con el almacenamiento, recuperación y manipulación de
             datos. Su función principal es interpretar y procesar las consultas SQL (Structured Query Language) enviadas
             por los usuarios o aplicaciones, optimizando la ejecución de estas consultas para mejorar el rendimiento. El
             motor de base de datos también gestiona la estructura física de los datos en el almacenamiento, asegurando
             que los datos se almacenen de manera eficiente y se puedan acceder rápidamente cuando sea necesario.</p>
+
+        <h1>Bases de datos NoSQL</h1>
+        <div>
+            <button onclick="redirect(1)" id="imgprincipal"><img src="/img/cassandra.png" id="imagenNosql"></button>
+        </div>
+
+        <div>
+            <button onclick="cambiarimg(1)" id="cassandra"><img src="/img/cassandra.png" id="botonCassandra"></button>
+            <button onclick="cambiarimg(2)" id="couchdb"><img src="/img/couchdb.png" id="botonCouchdb"></button>
+            <button onclick="cambiarimg(3)" id="mongodb"><img src="/img/mongodb.png" id="botonMongodb"></button>
+            <button onclick="cambiarimg(4)" id="redis"><img src="/img/redis.png" id="botonRedis"></button>
+        </div> 
+        <div>
+            <h2 id="textoNosql">Cassandra</h2>
+        </div>
+        <div id="anteriorSiguiente">
+            <button onclick="botones('L1')" id="anterior1"><img src="/img/flechaIzquierda.png"></button>
+            <button onclick="botones('R1')" id="siguiente1"><img src="/img/flechaDerecha.png"></button>
+        </div>
+
+        <h1>Base de datos SQL</h1>
+        <div>
+            <button onclick="redirect(2)" id="imgprincipal"><img src="/img/mariadb.png" id="imagenSql"></button>
+        </div>
+
+        <div>
+            <button onclick="cambiarimg(5)" id="mariadb"><img src="/img/mariadb.png" id="botonMariadb"></button>
+            <button onclick="cambiarimg(6)" id="mysql"><img src="/img/mysql.png" id="botonMysql"></button>
+            <button onclick="cambiarimg(7)" id="oracle"><img src="/img/oracle.png" id="botonOracle"></button>
+            <button onclick="cambiarimg(8)" id="postgres"><img src="/img/postgre.png" id="botonPostgre"></button>
+        </div>
+        <div>
+            <h2 id="textoSql">MariaDB</h2>
+        </div>
+        <div id="anteriorSiguiente">
+            <button onclick="botones('L2')" id="anterior2"><img src="/img/flechaIzquierda.png"></button>
+            <button onclick="botones('R2')" id="siguiente2"><img src="/img/flechaDerecha.png"></button>
+        </div>
+
+        <script src="../Inicio/javascript.js"></script>
     </aside>
 </body>
 
