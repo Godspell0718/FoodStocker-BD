@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./hola.css">
+    <title>Couch</title>
+</head>
+
+    <body>
+
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="index.html" class="menu-item">Principal</a>
+                </li>
+                <li>
+                    <a href="Ingresos/Ingresos.html" class="menu-item">Ingresos</a>
+                </li>
+                <li>
+                    <a href="Productos/Productos.html" class="menu-item">Insumos</a>
+                </li>
+                <li>
+                    <a href="Salidas/tabla.html" class="menu-item">Salidas</a>
+                </li>
+                <li>
+                    <a href="Personas/Personas.html" class="menu-item">Usuario</a>
+                </li>
+                <li>
+                    <a href="DestinationID/DestinationID.html" class="menu-item">Destination</a>
+                </li>
+                <li>
+                    <a href="Almacen/Almacen.html" class="menu-item">Almacen</a>
+                </li>
+                <li>
+                    <a href="Relaciones/relaciones.html" class="menu-item">Relaciones</a>
+                </li>
+                <li><a class="menu-item">Motores de BD</a>
+                    <ul class="subMenu">
+                        <li>
+                            BD Relacional
+                            <ul class="subMenuDos">
+                                <li><a href="BD_SQL/mysql.html">MySQL</a></li>
+                                <li><a href="BD_SQL/postgre.html">PostgreSQL</a></li>
+                                <li><a href="BD_SQL/Oracle.html">Oracle Database</a></li>
+                                <li><a href="BD_SQL/mariaDB.html">MariaDB</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            BD No Relacional
+                            <ul class="subMenuDos">
+                                <li><a href="BDNoSQL/mongodb.html">MongoDB</a></li>
+                                <li><a href="BDNoSQL/cassandra.html">Cassandra</a></li>
+                                <li><a href="BDNoSQL/couch.html">CouchDB</a></li>
+                                <li><a href="BDNoSQL/redis.html">Redis</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>CouchDB</h1>
+        </div>
+        <aside>
+            <h1>¿Qué es CouchDB?</h1>
+            <p>CouchDB es una base de datos NoSQL orientada a documentos, desarrollada por la Fundación Apache. Almacena
+                la información en formato JSON, lo que permite manejar datos de manera flexible y sin necesidad de
+                estructuras rígidas como en las bases de datos relacionales. Una de sus características principales es
+                que utiliza el protocolo HTTP para interactuar con los datos, lo que facilita el acceso y la integración
+                con aplicaciones web.
+                Además, CouchDB se destaca por su capacidad de replicación y sincronización entre múltiples servidores o
+                dispositivos, lo que la hace muy útil en entornos distribuidos y con aplicaciones que deben funcionar
+                incluso sin conexión. Su motor de consultas se basa en MapReduce, lo que permite procesar y organizar la
+                información de manera eficiente.</p>
+            <img src="/imgDB/Couch2.webp" alt="">
+            <h1>Principales características de CouchDB</h1>
+            <p>◆📄 Orientada a documentos: almacena los datos en formato JSON.</p>
+            <p>◆🌐 Acceso mediante HTTP/REST: permite interactuar con la base de datos como si fuera una API web.</p>
+            <p>◆🔄 Replicación y sincronización: soporta replicación entre servidores y sincronización con dispositivos
+            </p>
+            <p>◆🛠️ Consultas con MapReduce: utiliza funciones JavaScript para indexar, filtrar y consultar los datos.
+            </p>
+            <p>◆⚡ Alta tolerancia a fallos: maneja la redundancia y garantiza consistencia eventual en entornos
+                distribuidos. </p>
+            <h1>Ejmeplo de Script en CouchDB</h1>
+            <img src="/imgscript/couch.png" alt="">
+        </aside>
+
+    </body>
+
+</html>

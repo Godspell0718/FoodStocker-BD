@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+
+nav#menu {
+     background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 10px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav#menu li {
+    margin: 0 15px;
+}
+
+nav#menu .menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav#menu .menu-item:hover {
+    color: #ffcc00;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#imagen {
+    border-radius: 25px;
+    border-width: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+#destinoSalidas {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+
+}
+
+#destinoSalidas:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#destinoSalidas img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-width: 5px;
+
+}
+
+#entradasAlmacen {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease;
+
+}
+
+#entradasAlmacen:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+#entradasAlmacen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-width: 5px;
+
+}
+
+#insumoEntradas {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease;
+
+}
+
+#insumoEntradas:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+#insumoEntradas img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-width: 5px;
+
+}
+
+#usuarioSalidas {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+#usuarioSalidas:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#usuarioSalidas img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-width: 5px;
+
+}
+
+div button {
+    margin: 10px;
+    background-color: transparent;
+
+}
+
+#anterior,
+#siguiente {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+#anterior:hover,
+#siguiente:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#anterior img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+#siguiente img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+#imagen {
+    border: none;
+    background-color: transparent;
+    width: 800px;
+    height: 500px;
+    border-radius: 25px;
+    border-width: 5px;
+    transition: transform 0.3s ease;
+
+}
+
+#imagen:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+#imagen {
+    background-color: white;
+}

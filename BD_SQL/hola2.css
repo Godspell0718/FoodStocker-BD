@@ -1,0 +1,113 @@
+body {
+    background: #f0f2f5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#menu {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 12px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#menu li {
+    position: relative; /* necesario para posicionar submenús */
+    margin: 0 18px;
+}
+
+#menu .menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+#menu .menu-item:hover {
+    color: #ffcc00;
+}
+
+#menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;   
+    left: 0;     
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Mostrar submenú al pasar el mouse */
+#menu ul li:hover > ul {
+    display: block;
+}
+
+/* Submenú de segundo nivel */
+#menu ul li ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;       
+    left: 100%;   
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Mostrar submenú de segundo nivel */
+#menu ul li ul li:hover > ul {
+    display: block;
+    color: #ffcc00;
+}
+
+/* Estilo de enlaces en submenús */
+#menu ul li ul li a {
+    display: block;
+    padding: 10px 16px;
+    color: #f0f2f5;
+    text-decoration: none;
+    
+}
+
+/* Hover en enlaces del submenú */
+#menu ul li ul li a:hover {
+    background: #007bff;
+    color: #ffcc00;
+}
+
+.container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+aside {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+aside p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
