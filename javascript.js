@@ -185,7 +185,7 @@ function redirect(numero) {
             window.location.assign('BD_SQL/mysql.html')
 
         } else if (imagen2 === 'img/oracle.png') {
-            window.location.assign('/BD_SQL/Oracle.html')
+            window.location.assign('BD_SQL/Oracle.html')
 
         } else if (imagen2 === 'img/postgre.png') {
             window.location.assign('BD_SQL/postgre.html')
