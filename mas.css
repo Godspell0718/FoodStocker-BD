@@ -125,257 +125,219 @@ div {
 
 }
 
-#imagenNosql {
-    width: 500px;
-    height: 500px;
-    border-radius: 25px;
-    border-width: 5px;
-
+.card {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
 }
 
-#imagenSql {
-    width: 500px;
-    height: 500px;
-    border-radius: 25px;
-    border-width: 5px;
-
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
 }
 
-#cassandra {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    border-radius: 25px;
-    transition: transform 0.3s ease;
-
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  backface-visibility: hidden;       
 }
 
-#cassandra:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-#cassandra img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
-
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
 }
 
-#couchdb {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
-
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-#couchdb:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-
+.card:hover .content {
+  transform: rotateY(180deg);
 }
 
-#couchdb img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
 
+  0% {
+    transform: rotateZ(360deg);
+  }
 }
 
-#mongodb {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
-
+.front {
+  transform: rotateY(180deg);
+  color: white;
 }
 
-#mongodb:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#mongodb img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
-
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
 }
 
-#redis {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
 }
 
-#redis:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-#redis img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
-
+.title p {
+  width: 50%;
 }
 
-#mariadb {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
 }
 
-#mariadb:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
-#mariadb img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
-
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
 }
 
-#mysql {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
 }
 
-#mysql:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
 }
 
-#mysql img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
 
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-#oracle {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
+.contenedorCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px;
 }
 
-#oracle:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-#oracle img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
-
+.boton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  display: block; 
+  width: 190px; 
+  height: 250px; 
 }
 
-#postgres {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
+.boton:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
 }
 
-#postgres:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+.boton:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-#postgres img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border-width: 5px;
-
-}
-
-div button {
-    margin: 10px;
-    background-color: transparent;
-
-}
-
-#anterior1,
-#siguiente1 {
-    display: flex;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
-}
-
-#anterior1:hover, #siguiente1:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-#anterior2,
-#siguiente2 {
-    display: flex;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
-}
-
-#anterior2:hover, #siguiente2:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-#anterior img {
-    width: 50px;
-    border-radius: 100%;
-}
-
-#siguiente img {
-    width: 50px;
-    border-radius: 100%;
-}
-
-#imgprincipal {
-    border: none;
-    background-color: transparent;
-    width: 500px;
-    height: 500px;
-    border-radius: 25px;
-    border-width: 5px;
-    transition: transform 0.3s ease;
-
-}
-
-#imgprincipal:hover {
-    cursor: pointer;
-    transform: scale(1.01);
-
+.boton .card {
+  width: 100%;
+  height: 100%;
 }

@@ -90,7 +90,53 @@
             <p>◆🔄 Clustering y replicación avanzada con Oracle RAC.</p>
             <p>◆🧩 Amplio ecosistema de herramientas de administración y seguridad.</p>
               <h1>Ejmeplo de Script en Oracle</h1>
-            <img src="../imgscript/oracle.jpg" alt="">
+            <p>// 🔹 CREATE - Insertar usuario
+    const resultInsert = await connection.execute(
+      `INSERT INTO USUARIOS (NOMBRE, EDAD, EMAIL) VALUES (:nombre, :edad, :email) RETURNING ID INTO :id`,
+      {
+        nombre: 'Claudia',
+        edad: 40,
+        email: 'claudia@example.com',
+        id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
+      }
+    );
+    await connection.commit();
+    const userId = resultInsert.outBinds.id[0];
+    console.log('🟢 Usuario insertado con ID:', userId);</p>
+    <p>// 🔹 READ - Leer usuarios
+    const resultSelect = await connection.execute('SELECT * FROM USUARIOS');
+    console.log('📄 Usuarios:');
+    console.table(resultSelect.rows);</p>
+    <p>// 🔹 UPDATE - Actualizar edad
+    await connection.execute(
+      `UPDATE USUARIOS SET EDAD = :edad WHERE ID = :id`,
+      { edad: 41, id: userId }
+    );
+    await connection.commit();
+    console.log('🟡 Usuario actualizado');</p>
+    <p>// 🔹 DELETE - Eliminar usuario
+    await connection.execute(
+      `DELETE FROM USUARIOS WHERE ID = :id`,
+      { id: userId }
+    );
+    await connection.commit();
+    console.log('🔴 Usuario eliminado');
+
+   catch (err) {
+    console.error('❌ Error en operación CRUD:', err);
+  } finally {
+    if (connection) {
+      try {
+        await connection.close();
+        console.log('🔒 Conexión cerrada');
+      } catch (err) {
+        console.error('Error al cerrar conexión:', err);
+      }
+    }
+  }
+
+
+main();</p>
 
         </aside>
     </body>

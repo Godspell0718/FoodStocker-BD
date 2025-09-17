@@ -87,8 +87,39 @@
             <p>◆⚡ Alto rendimiento: Optimizado para operaciones rápidas de lectura y escritura.</p>
             <p>◆📊 Índices avanzados: Soporta índices simples, compuestos, geoespaciales, de texto, entre otros.</p>
             <h1>Ejmeplo de Script en MongoDB</h1>
-            <img src="../imgscript/mongo.jpg" alt="">
-            
+            <p>// 🔹 CREATE - Insertar un documento
+            const nuevoUsuario = { nombre: "Juan", edad: 30, email: "juan@example.com" };
+            const resultadoInsert = await coleccion.insertOne(nuevoUsuario);
+            console.log("🟢 Usuario insertado con ID:", resultadoInsert.insertedId);
+            </p>
+
+    <p>// 🔹 READ - Buscar usuarios
+    const usuarios = await coleccion.find({}).toArray();
+    console.log("📄 Lista de usuarios:");
+    console.log(usuarios);
+    </p>
+
+    <p>// 🔹 UPDATE - Actualizar un usuario
+    const filtro = { nombre: "Juan" };
+    const actualizacion = { $set: { edad: 31 } };
+    const resultadoUpdate = await coleccion.updateOne(filtro, actualizacion);
+    console.log(`🟡 Documentos modificados: ${resultadoUpdate.modifiedCount}`);
+    </p>
+
+    <p>// 🔹 DELETE - Eliminar un usuario
+    const resultadoDelete = await coleccion.deleteOne({ nombre: "Juan" });
+    console.log(`🔴 Documentos eliminados: ${resultadoDelete.deletedCount}`);
+
+    } catch (error) {
+    console.error("❌ Error en operación CRUD:", error);
+  } finally {
+    await client.close();
+    console.log("🔒 Conexión cerrada");
+  }
+    }
+    </p>
+
+main();
         </aside>
 
     </body>
