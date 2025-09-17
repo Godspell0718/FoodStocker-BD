@@ -94,33 +94,42 @@
                 documentación y actualizaciones frecuentes.</p>
             <h1>Ejmeplo de Script en MariaDB</h1>
             <p>// 🔹 CREATE - Insertar un usuario
-    const [insertResult] = await connection.execute(
-      'INSERT INTO usuarios (nombre, edad, email) VALUES (?, ?, ?)',
-      ['Lucía', 29, 'lucia@example.com']
-    );
-    console.log('🟢 Usuario insertado con ID:', insertResult.insertId);
-</p>
-    <p>// 🔹 READ - Leer todos los usuarios
-    const [rows] = await connection.execute('SELECT * FROM usuarios');
-    console.log('📄 Usuarios:');
-    console.table(rows);
-</p>
-    <p>// 🔹 UPDATE - Actualizar edad del usuario insertado
-    const [updateResult] = await connection.execute(
-      'UPDATE usuarios SET edad = ? WHERE id = ?',
-      [30, insertResult.insertId]
-    );
-    console.log('🟡 Usuarios actualizados:', updateResult.affectedRows);
- </p>
-    <p>// 🔹 DELETE - Eliminar usuario
-    const [deleteResult] = await connection.execute(
-      'DELETE FROM usuarios WHERE id = ?',
-      [insertResult.insertId]
-    );
-    console.log('🔴 Usuarios eliminados:', deleteResult.affectedRows);
-</p>
+                const [insertResult] = await connection.execute(
+                'INSERT INTO usuarios (nombre, edad, email) VALUES (?, ?, ?)',
+                ['Lucía', 29, 'lucia@example.com']
+                );
+                console.log('🟢 Usuario insertado con ID:', insertResult.insertId);
+            </p>
+            <p>// 🔹 READ - Leer todos los usuarios
+                const [rows] = await connection.execute('SELECT * FROM usuarios');
+                console.log('📄 Usuarios:');
+                console.table(rows);
+            </p>
+            <p>// 🔹 UPDATE - Actualizar edad del usuario insertado
+                const [updateResult] = await connection.execute(
+                'UPDATE usuarios SET edad = ? WHERE id = ?',
+                [30, insertResult.insertId]
+                );
+                console.log('🟡 Usuarios actualizados:', updateResult.affectedRows);
+            </p>
+            <p>// 🔹 DELETE - Eliminar usuario
+                const [deleteResult] = await connection.execute(
+                'DELETE FROM usuarios WHERE id = ?',
+                [insertResult.insertId]
+                );
+                console.log('🔴 Usuarios eliminados:', deleteResult.affectedRows);
+            </p>
+           <br>
+            <br>
+            <button class="button" type="button" id="volverBtn">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Volver a la página Anterior</span>
+                    </div>
+                </div>
+            </button>
         </aside>
-
+        <script src="js.js"></script>
     </body>
 
 </html>

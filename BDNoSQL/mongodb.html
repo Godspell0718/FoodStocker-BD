@@ -67,13 +67,15 @@
             <h1>MongoDB</h1>
         </div>
         <aside>
+
+
             <h1>¿Qué es MongoDB?</h1>
             <p>MongoDB es una base de datos NoSQL orientada a documentos, de código abierto, muy popular por su
                 flexibilidad, escalabilidad y facilidad de uso. En lugar de usar tablas y filas como en las bases de
                 datos relacionales, MongoDB almacena datos en documentos JSON (o más bien, en una representación binaria
                 llamada BSON).
                 MongoDB es un sistema de gestión de bases de datos NoSQL de código abierto, orientado a documentos.</p>
-                <p>A diferencia de las bases de datos relacionales tradicionales que organizan la información en tablas con
+            <p>A diferencia de las bases de datos relacionales tradicionales que organizan la información en tablas con
                 filas y columnas, MongoDB almacena los datos en documentos con formato BSON (una extensión binaria de
                 JSON), lo que permite representar estructuras de datos más flexibles y cercanas a la forma en la que se
                 programan los objetos en muchos lenguajes. Estos documentos se agrupan en colecciones, equivalentes a
@@ -88,40 +90,49 @@
             <p>◆📊 Índices avanzados: Soporta índices simples, compuestos, geoespaciales, de texto, entre otros.</p>
             <h1>Ejmeplo de Script en MongoDB</h1>
             <p>// 🔹 CREATE - Insertar un documento
-            const nuevoUsuario = { nombre: "Juan", edad: 30, email: "juan@example.com" };
-            const resultadoInsert = await coleccion.insertOne(nuevoUsuario);
-            console.log("🟢 Usuario insertado con ID:", resultadoInsert.insertedId);
+                const nuevoUsuario = { nombre: "Juan", edad: 30, email: "juan@example.com" };
+                const resultadoInsert = await coleccion.insertOne(nuevoUsuario);
+                console.log("🟢 Usuario insertado con ID:", resultadoInsert.insertedId);
             </p>
 
-    <p>// 🔹 READ - Buscar usuarios
-    const usuarios = await coleccion.find({}).toArray();
-    console.log("📄 Lista de usuarios:");
-    console.log(usuarios);
-    </p>
+            <p>// 🔹 READ - Buscar usuarios
+                const usuarios = await coleccion.find({}).toArray();
+                console.log("📄 Lista de usuarios:");
+                console.log(usuarios);
+            </p>
 
-    <p>// 🔹 UPDATE - Actualizar un usuario
-    const filtro = { nombre: "Juan" };
-    const actualizacion = { $set: { edad: 31 } };
-    const resultadoUpdate = await coleccion.updateOne(filtro, actualizacion);
-    console.log(`🟡 Documentos modificados: ${resultadoUpdate.modifiedCount}`);
-    </p>
+            <p>// 🔹 UPDATE - Actualizar un usuario
+                const filtro = { nombre: "Juan" };
+                const actualizacion = { $set: { edad: 31 } };
+                const resultadoUpdate = await coleccion.updateOne(filtro, actualizacion);
+                console.log(`🟡 Documentos modificados: ${resultadoUpdate.modifiedCount}`);
+            </p>
 
-    <p>// 🔹 DELETE - Eliminar un usuario
-    const resultadoDelete = await coleccion.deleteOne({ nombre: "Juan" });
-    console.log(`🔴 Documentos eliminados: ${resultadoDelete.deletedCount}`);
+            <p>// 🔹 DELETE - Eliminar un usuario
+                const resultadoDelete = await coleccion.deleteOne({ nombre: "Juan" });
+                console.log(`🔴 Documentos eliminados: ${resultadoDelete.deletedCount}`);
 
-    } catch (error) {
-    console.error("❌ Error en operación CRUD:", error);
-  } finally {
-    await client.close();
-    console.log("🔒 Conexión cerrada");
-  }
-    }
-    </p>
+                } catch (error) {
+                console.error("❌ Error en operación CRUD:", error);
+                } finally {
+                await client.close();
+                console.log("🔒 Conexión cerrada");
+                }
+                }
+            </p>
 
-main();
+            main();
+            <br>
+            <br>
+            <button class="button" type="button" id="volverBtn">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Volver a la página Principal</span>
+                    </div>
+                </div>
+            </button>
         </aside>
-
+        <script src="js.js"></script>
     </body>
 
 </html>

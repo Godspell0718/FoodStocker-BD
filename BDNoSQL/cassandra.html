@@ -85,28 +85,40 @@
                 la carga y aumentar la capacidad.</p>
             <p>◆🔄 Alta disponibilidad: No tiene un único punto de fallo; los datos se replican automáticamente entre
                 múltiples nodos.</p>
-            <p>◆⚡ Rendimiento en escritura muy alto: Está optimizada para manejar flujos masivos de inserciones de datos.</p>
-            <p>◆ 🔍 Lenguaje de consultas (CQL): Usa Cassandra Query Language, similar al SQL, lo que facilita su aprendizaje.</p>
+            <p>◆⚡ Rendimiento en escritura muy alto: Está optimizada para manejar flujos masivos de inserciones de
+                datos.</p>
+            <p>◆ 🔍 Lenguaje de consultas (CQL): Usa Cassandra Query Language, similar al SQL, lo que facilita su
+                aprendizaje.</p>
             <h1>Ejmeplo de Script en en Cassandra DB</h1>
             <p>// 🔹 CREATE - Insertar un usuario
-    const insertQuery = 'INSERT INTO usuarios (id, nombre, edad, email) VALUES (?, ?, ?, ?)';
-    const id = cassandra.types.Uuid.random();
-    await client.execute(insertQuery, [id, 'Laura', 27, 'laura@example.com'], { prepare: true });
-    console.log(`🟢 Usuario insertado con id: ${id}`);</p>
-    <p>// 🔹 READ - Consultar usuario por id
-    const selectQuery = 'SELECT * FROM usuarios WHERE id = ?';
-    const result = await client.execute(selectQuery, [id], { prepare: true });
-    console.log('📄 Usuario leído:', result.rows[0]);</p>
-    <p> // 🔹 UPDATE - Actualizar edad del usuario
-    const updateQuery = 'UPDATE usuarios SET edad = ? WHERE id = ?';
-    await client.execute(updateQuery, [28, id], { prepare: true });
-    console.log('🟡 Usuario actualizado');</p>
-    <p>// 🔹 DELETE - Eliminar usuario
-    const deleteQuery = 'DELETE FROM usuarios WHERE id = ?';
-    await client.execute(deleteQuery, [id], { prepare: true });
-    console.log('🔴 Usuario eliminado');</p>
-        </aside>
+                const insertQuery = 'INSERT INTO usuarios (id, nombre, edad, email) VALUES (?, ?, ?, ?)';
+                const id = cassandra.types.Uuid.random();
+                await client.execute(insertQuery, [id, 'Laura', 27, 'laura@example.com'], { prepare: true });
+                console.log(`🟢 Usuario insertado con id: ${id}`);</p>
+            <p>// 🔹 READ - Consultar usuario por id
+                const selectQuery = 'SELECT * FROM usuarios WHERE id = ?';
+                const result = await client.execute(selectQuery, [id], { prepare: true });
+                console.log('📄 Usuario leído:', result.rows[0]);</p>
+            <p> // 🔹 UPDATE - Actualizar edad del usuario
+                const updateQuery = 'UPDATE usuarios SET edad = ? WHERE id = ?';
+                await client.execute(updateQuery, [28, id], { prepare: true });
+                console.log('🟡 Usuario actualizado');</p>
+            <p>// 🔹 DELETE - Eliminar usuario
+                const deleteQuery = 'DELETE FROM usuarios WHERE id = ?';
+                await client.execute(deleteQuery, [id], { prepare: true });
+                console.log('🔴 Usuario eliminado');</p>
 
+            <br>
+            <br>
+            <button class="button" type="button" id="volverBtn">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Volver a la página Principal</span>
+                    </div>
+                </div>
+            </button>
+        </aside>
+        <script src="js.js"></script>
     </body>
 
 </html>

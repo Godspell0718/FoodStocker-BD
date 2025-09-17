@@ -200,3 +200,86 @@ div button {
 #imagen {
     background-color: white;
 }
+
+#menu {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#menu li {
+    position: relative; 
+    margin: 0 18px;
+}
+
+#menu .menu-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+#menu .menu-item:hover {
+    color: #ffcc00;
+}
+
+#menu ul li ul {
+    color: #ffffff;
+    display: none;
+    position: absolute;
+    top: 100%;   
+    left: 10%;     
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#menu ul li ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;       
+    left: 100%;   
+    margin-left: 5px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#menu ul li ul li:hover > ul {
+    display: block;
+}
+
+#menu ul li ul li a {
+    display: block;
+    padding: 10px 16px;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+#menu ul li ul li a:hover {
+    background: #007bff;
+    color: #ffffff;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
