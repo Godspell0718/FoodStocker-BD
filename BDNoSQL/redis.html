@@ -82,31 +82,44 @@
             <h1>Principales características de Redis</h1>
             <p>◆⚡ Alto rendimiento: trabaja en memoria, lo que permite millones de operaciones por segundo.</p>
             <p>◆🔑 Modelo clave-valor: los datos se almacenan como pares clave-valor.</p>
-            <p>◆🗂️ Tipos de datos avanzados: no solo cadenas, también listas, conjuntos, hashes, sorted sets, bitmaps, streams, etc.
+            <p>◆🗂️ Tipos de datos avanzados: no solo cadenas, también listas, conjuntos, hashes, sorted sets, bitmaps,
+                streams, etc.
             </p>
-            <p>◆🛠️ Operaciones atómicas: garantiza que ciertas operaciones se ejecuten de manera completa sin interferencias.
+            <p>◆🛠️ Operaciones atómicas: garantiza que ciertas operaciones se ejecuten de manera completa sin
+                interferencias.
             </p>
             <p>◆🌐 Ligero y rápido de implementar: muy usado en microservicios y entornos en la nube. </p>
             <h1>Ejmeplo de Script en Redis</h1>
             <p>// 🔹 CREATE - Guardar un objeto como string (JSON)
-    const nuevoUsuario = {
-      nombre: "Ana",
-      edad: 25,
-      email: "ana@example.com"
-    };</p>
+                const nuevoUsuario = {
+                nombre: "Ana",
+                edad: 25,
+                email: "ana@example.com"
+                };</p>
             <p> // 🔹 READ - Obtener el objeto
-    const usuarioStr = await client.get(key);
-    const usuario = JSON.parse(usuarioStr);
-    console.log("📄 Usuario leído:", usuario);</p>
-    <p> // 🔹 UPDATE - Modificar algún dato
-    usuario.edad = 26;
-    await client.set(key, JSON.stringify(usuario));
-    console.log("🟡 Usuario actualizado");</p>
-    <p> // 🔹 DELETE - Eliminar el dato
-    await client.del(key);
-    console.log("🔴 Usuario eliminado");</p>
+                const usuarioStr = await client.get(key);
+                const usuario = JSON.parse(usuarioStr);
+                console.log("📄 Usuario leído:", usuario);</p>
+            <p> // 🔹 UPDATE - Modificar algún dato
+                usuario.edad = 26;
+                await client.set(key, JSON.stringify(usuario));
+                console.log("🟡 Usuario actualizado");</p>
+            <p> // 🔹 DELETE - Eliminar el dato
+                await client.del(key);
+                console.log("🔴 Usuario eliminado");</p>
 
+
+            <br>
+            <br>
+            <button class="button" type="button" id="volverBtn">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Volver a la página Principal</span>
+                    </div>
+                </div>
+            </button>
         </aside>
+        <script src="js.js"></script>
 
     </body>
 

@@ -86,37 +86,46 @@
             <p>◆🔗 Soporta JSON y XML además de datos relacionales.</p>
             <p>◆✅ Cumple con el estándar SQL en un alto nivel.</p>
             <h1>Ejmeplo de Script en PostgreSQL</h1>
-            
+
             <p>// 🔹 CREATE - Insertar un usuario
-    const insertResult = await client.query(
-      'INSERT INTO usuarios (nombre, edad, email) VALUES ($1, $2, $3) RETURNING id',
-      ['Pedro', 35, 'pedro@example.com']
-    );
-    const userId = insertResult.rows[0].id;
-    console.log('🟢 Usuario insertado con ID:', userId);</p>
-    <p>// 🔹 READ - Leer todos los usuarios
-    const result = await client.query('SELECT * FROM usuarios');
-    console.log('📄 Usuarios:');
-    console.table(result.rows);</p>
-    <p>// 🔹 UPDATE - Actualizar usuario
-    await client.query(
-      'UPDATE usuarios SET edad = $1 WHERE id = $2',
-      [36, userId]
-    );
-    console.log('🟡 Usuario actualizado');</p>
-    <p>// 🔹 DELETE - Eliminar usuario
-    await client.query('DELETE FROM usuarios WHERE id = $1', [userId]);
-    console.log('🔴 Usuario eliminado');
+                const insertResult = await client.query(
+                'INSERT INTO usuarios (nombre, edad, email) VALUES ($1, $2, $3) RETURNING id',
+                ['Pedro', 35, 'pedro@example.com']
+                );
+                const userId = insertResult.rows[0].id;
+                console.log('🟢 Usuario insertado con ID:', userId);</p>
+            <p>// 🔹 READ - Leer todos los usuarios
+                const result = await client.query('SELECT * FROM usuarios');
+                console.log('📄 Usuarios:');
+                console.table(result.rows);</p>
+            <p>// 🔹 UPDATE - Actualizar usuario
+                await client.query(
+                'UPDATE usuarios SET edad = $1 WHERE id = $2',
+                [36, userId]
+                );
+                console.log('🟡 Usuario actualizado');</p>
+            <p>// 🔹 DELETE - Eliminar usuario
+                await client.query('DELETE FROM usuarios WHERE id = $1', [userId]);
+                console.log('🔴 Usuario eliminado');
 
-  } catch (err) {
-    console.error('❌ Error en operación CRUD:', err);
-  } finally {
-    await client.end();
-    console.log('🔒 Conexión cerrada');
-  }</p>
+                } catch (err) {
+                console.error('❌ Error en operación CRUD:', err);
+                } finally {
+                await client.end();
+                console.log('🔒 Conexión cerrada');
+                }</p>
 
-
+            <br>
+            <br>
+            <button class="button" type="button" id="volverBtn">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Volver a la página Principal</span>
+                    </div>
+                </div>
+            </button>
         </aside>
+        <script src="js.js"></script>
     </body>
 
 </html>

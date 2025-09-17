@@ -95,22 +95,33 @@
 
             <h1>Ejmeplo de Script en CouchDB</h1>
             <p> // 🔹 CREATE - Insertar documento
-    const nuevoUsuario = {
-      nombre: "Carlos",
-      edad: 28,
-      email: "carlos@example.com"
-    };</p>
-    <p>// 🔹 READ - Leer documento
-    const doc = await db.get(insertResult.id);
-    console.log("📄 Documento leído:", doc);</p>
-    <p>// 🔹 UPDATE - Actualizar documento
-    doc.edad = 29;
-    const updateResult = await db.insert(doc);
-    console.log(`🟡 Documento actualizado, nueva _rev: ${updateResult.rev}`);</p>
-    <p>   // 🔹 DELETE - Eliminar documento
-    const deleteResult = await db.destroy(updateResult.id, updateResult.rev);
-    console.log(`🔴 Documento eliminado:`, deleteResult);</p>
+                const nuevoUsuario = {
+                nombre: "Carlos",
+                edad: 28,
+                email: "carlos@example.com"
+                };</p>
+            <p>// 🔹 READ - Leer documento
+                const doc = await db.get(insertResult.id);
+                console.log("📄 Documento leído:", doc);</p>
+            <p>// 🔹 UPDATE - Actualizar documento
+                doc.edad = 29;
+                const updateResult = await db.insert(doc);
+                console.log(`🟡 Documento actualizado, nueva _rev: ${updateResult.rev}`);</p>
+            <p> // 🔹 DELETE - Eliminar documento
+                const deleteResult = await db.destroy(updateResult.id, updateResult.rev);
+                console.log(`🔴 Documento eliminado:`, deleteResult);</p>
+
+            <br>
+            <br>
+            <button class="button" type="button" id="volverBtn">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Volver a la página Principal</span>
+                    </div>
+                </div>
+            </button>
         </aside>
+        <script src="js.js"></script>
 
     </body>
 
