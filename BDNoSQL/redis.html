@@ -88,7 +88,24 @@
             </p>
             <p>◆🌐 Ligero y rápido de implementar: muy usado en microservicios y entornos en la nube. </p>
             <h1>Ejmeplo de Script en Redis</h1>
-            <img src="../imgscript/Redis.jpg" alt="">
+            <p>// 🔹 CREATE - Guardar un objeto como string (JSON)
+    const nuevoUsuario = {
+      nombre: "Ana",
+      edad: 25,
+      email: "ana@example.com"
+    };</p>
+            <p> // 🔹 READ - Obtener el objeto
+    const usuarioStr = await client.get(key);
+    const usuario = JSON.parse(usuarioStr);
+    console.log("📄 Usuario leído:", usuario);</p>
+    <p> // 🔹 UPDATE - Modificar algún dato
+    usuario.edad = 26;
+    await client.set(key, JSON.stringify(usuario));
+    console.log("🟡 Usuario actualizado");</p>
+    <p> // 🔹 DELETE - Eliminar el dato
+    await client.del(key);
+    console.log("🔴 Usuario eliminado");</p>
+
         </aside>
 
     </body>

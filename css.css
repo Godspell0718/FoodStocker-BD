@@ -40,7 +40,53 @@ nav#menu .menu-item {
 nav#menu .menu-item:hover {
     color: #ffcc00;
 }
+#menu ul li ul {
+    color: #f0f2f5;
+    display: none;
+    position: absolute;
+    top: 100%;   
+    left: 10%;     
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
 
+#menu ul li ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;       
+    left: 100%;   
+    margin-left: 5px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#menu ul li ul li:hover > ul {
+    display: block;
+}
+
+#menu ul li ul li a {
+    display: block;
+    padding: 10px 16px;
+    color: #f0f2f5;
+    text-decoration: none;
+    
+}
+
+#menu ul li ul li a:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
 
 h1 {
 

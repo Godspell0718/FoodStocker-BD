@@ -91,6 +91,29 @@
             <p>◆🆓 Código abierto: disponible de manera gratuita, aunque también tiene versiones comerciales.</p>
             <h1>Ejmeplo de Script en MySQL</h1>
             <img src="../imgscript/mysql.png" alt="">
+            <p>
+    // 🔹 CREATE - Insertar usuario
+    const [insertResult] = await connection.execute(
+      'INSERT INTO usuarios (nombre, edad, email) VALUES (?, ?, ?)',
+      ['Marta', 32, 'marta@example.com']
+    );
+    console.log('🟢 Usuario insertado con ID:', insertResult.insertId);</p>
+    <p>// 🔹 READ - Leer usuarios
+    const [rows] = await connection.execute('SELECT * FROM usuarios');
+    console.log('📄 Usuarios:');
+    console.table(rows);</p>
+    <p>// 🔹 UPDATE - Actualizar usuario
+    const [updateResult] = await connection.execute(
+      'UPDATE usuarios SET edad = ? WHERE id = ?',
+      [33, insertResult.insertId]
+    );
+    console.log('🟡 Usuarios actualizados:', updateResult.affectedRows </p>
+    <p>// 🔹 DELETE - Eliminar usuario
+    const [deleteResult] = await connection.execute(
+      'DELETE FROM usuarios WHERE id = ?',
+      [insertResult.insertId]
+    );
+    console.log('🔴 Usuarios eliminados:', deleteResult.affectedRows);</p>
         </aside>
 
     </body>
