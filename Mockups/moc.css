@@ -1,0 +1,244 @@
+body {
+    background: #f0f2f5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#menu {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 12px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#menu li {
+    position: relative; /* necesario para posicionar submenús */
+    margin: 0 18px;
+}
+
+#menu .menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+#menu .menu-item:hover {
+    color: #ffcc00;
+}
+
+#menu ul li ul {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #f0f2f5;
+    display: none;
+    position: absolute;
+    top: 100%;   
+    left: 0;     
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Mostrar submenú al pasar el mouse */
+#menu ul li:hover > ul {
+    display: block;
+}
+
+/* Submenú de segundo nivel */
+#menu ul li ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;       
+    left: 100%;   
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Mostrar submenú de segundo nivel */
+#menu ul li ul li:hover > ul {
+    display: block;
+}
+
+/* Estilo de enlaces en submenús */
+#menu ul li ul li a {
+    display: block;
+    padding: 10px 16px;
+    color: #f0f2f5;
+    text-decoration: none;
+    
+}
+
+/* Hover en enlaces del submenú */
+#menu ul li ul li a:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+aside {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+aside p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Boton */ 
+.button {
+    
+    all: unset;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
+    border-radius: 100em;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow:
+    -0.15em -0.15em 0.15em -0.075em rgba(5, 5, 5, 0.25),
+    0.0375em 0.0375em 0.0675em 0 rgba(5, 5, 5, 0.1);
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: calc(100% + 0.3em);
+    height: calc(100% + 0.3em);
+    top: -0.15em;
+    left: -0.15em;
+    border-radius: inherit;
+    background: linear-gradient(
+    -135deg,
+    rgba(5, 5, 5, 0.5),
+    transparent 20%,
+    transparent 100%
+    );
+    filter: blur(0.0125em);
+    opacity: 0.25;
+    mix-blend-mode: multiply;
+}
+
+.button .button-outer {
+    position: relative;
+    z-index: 1;
+    border-radius: inherit;
+    transition: box-shadow 300ms ease;
+    will-change: box-shadow;
+    box-shadow:
+    0 0.05em 0.05em -0.01em rgba(5, 5, 5, 1),
+    0 0.01em 0.01em -0.01em rgba(5, 5, 5, 0.5),
+    0.15em 0.3em 0.1em -0.01em rgba(5, 5, 5, 0.25);
+}
+
+.button:hover .button-outer {
+    box-shadow:
+    0 0 0 0 rgba(5, 5, 5, 1),
+    0 0 0 0 rgba(5, 5, 5, 0.5),
+    0 0 0 0 rgba(5, 5, 5, 0.25);
+}
+
+.button-inner {
+    --inset: 0.035em;
+    position: relative;
+    z-index: 1;
+    border-radius: inherit;
+    padding: 1em 1.5em;
+    background-image: linear-gradient(
+    135deg,
+    rgba(230, 230, 230, 1),
+    rgba(180, 180, 180, 1)
+    );
+    transition:
+    box-shadow 300ms ease,
+    clip-path 250ms ease,
+    background-image 250ms ease,
+    transform 250ms ease;
+    will-change: box-shadow, clip-path, background-image, transform;
+    overflow: clip;
+    clip-path: inset(0 0 0 0 round 100em);
+    box-shadow:
+          /* 1 */
+    0 0 0 0 inset rgba(5, 5, 5, 0.1),
+    /* 2 */ -0.05em -0.05em 0.05em 0 inset rgba(5, 5, 5, 0.25),
+    /* 3 */ 0 0 0 0 inset rgba(5, 5, 5, 0.1),
+    /* 4 */ 0 0 0.05em 0.2em inset rgba(255, 255, 255, 0.25),
+    /* 5 */ 0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 1),
+    /* 6 */ 0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.25),
+    /* 7 */ -0.075em -0.25em 0.25em 0.1em inset rgba(5, 5, 5, 0.25);
+}
+
+.button:hover .button-inner {
+    clip-path: inset(
+    clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px)
+        clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px) round 100em
+    );
+    box-shadow:
+          /* 1 */
+    0.1em 0.15em 0.05em 0 inset rgba(5, 5, 5, 0.75),
+    /* 2 */ -0.025em -0.03em 0.05em 0.025em inset rgba(5, 5, 5, 0.5),
+    /* 3 */ 0.25em 0.25em 0.2em 0 inset rgba(5, 5, 5, 0.5),
+    /* 4 */ 0 0 0.05em 0.5em inset rgba(255, 255, 255, 0.15),
+    /* 5 */ 0 0 0 0 inset rgba(255, 255, 255, 1),
+    /* 6 */ 0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.25),
+    /* 7 */ -0.075em -0.12em 0.2em 0.1em inset rgba(5, 5, 5, 0.25);
+}
+
+.button .button-inner span {
+    position: relative;
+    z-index: 4;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(
+    135deg,
+    rgba(25, 25, 25, 1),
+    rgba(75, 75, 75, 1)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: transform 250ms ease;
+    display: block;
+    will-change: transform;
+    text-shadow: rgba(0, 0, 0, 0.1) 0 0 0.1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button:hover .button-inner span {
+    transform: scale(0.975);
+}
+
+.button:active .button-inner {
+    transform: scale(0.975);
+}
