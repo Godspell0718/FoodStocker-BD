@@ -241,4 +241,5 @@ aside p {
 
 .button:active .button-inner {
     transform: scale(0.975);
+
 }
