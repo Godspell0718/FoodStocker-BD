@@ -11,6 +11,11 @@ body {
   background: linear-gradient(90deg, #007bff, #0056b3);
   padding: 12px 0;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  padding: 12px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+
 }
 
 
@@ -85,6 +90,33 @@ body {
   min-width: 160px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+
+  color: #f0f2f5;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#menu ul li ul li ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
 }
 
 #menu ul li ul li:hover>ul {
@@ -410,15 +442,15 @@ img {
 }
 
 .btn-custom {
-  background-color: white;       
-  color: black;                  
+  background-color: white;
+  color: black;
   border: 1px solid black;
-  transition: all 0.3s ease-in-out; 
-  box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn-custom:hover {
-  background-color: black;       
-  color: white;                  
-  box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
