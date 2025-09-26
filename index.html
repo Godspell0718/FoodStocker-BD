@@ -5,16 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GESTOR DE BASE DE DATOS </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="mas.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <nav id="menu">
         <ul>
+            <!-- logo del proyecto en el menu -->
+            <nav class="navbar bg-linear-gradient(90deg, #007bff, #0056b3);">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="../FoodStocker-BD/imgLogo/logot2.png" alt="Logo" width="70" height="70" class="logo">
+
+                    </a>
+                    <h1 class="titulo"></h1>
+                </div>
+            </nav>
             <li>
 
-                <a href="../index.html" class="menu-item">Principal</a>
+                <a href="index.html" class="menu-item">Principal</a>
             </li>
             <li>
                 <a href="Ingresos/Ingresos.html" class="menu-item">Ingresos</a>
@@ -37,9 +53,12 @@
             <li>
                 <a href="Relaciones/relaciones.html" class="menu-item">Relaciones</a>
             </li>
+
+            <li><a href="Mockups/mockups.html" class="menu-item">Mockups</a></li>
             <li>
                 <a href="Acerca_de/acerca_De.html" class="menu-item">Acerca_de</a>
             </li>
+
             <li><a class="menu-item">Motores de BD</a>
                 <ul class="subMenu">
                     <li>
@@ -62,33 +81,76 @@
                         </ul>
                     </li>
                 </ul>
+
+            </li>
+            <!-- Barra de navegacion -->
+            <nav class="navbar navbar-expand-lg bg-linear-gradient(90deg, #007bff, #0056b3);">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="#">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Sugerencias</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Más
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Relaciones/relaciones.html">Relaciones</a></li>
+                                    <li><a class="dropdown-item" href="Mockups/mockups.html">Mockups</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Lo que quieran</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-custom" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- Fin de la barra de navegacion -->
         </ul>
-        </li>
-        <li><a href="Mockups/mockups.html" class="menu-item">Mockups</a></li>
-        </ul>
+
     </nav>
     <div class="container">
-        <h1>Bienvenido al Gestor de Base de Datos</h1>
+        <h1 class="titulo1">Bienvenido al Gestor de Base de Datos</h1>
     </div>
 
     <p>
-    <h4>
+    <h4 class="titulo2">
         AQUI RESPONDEREMOS LAS SIGUIENTES PREGUNTAS:
     </h4>
 
-    <h3>¿Qué es un gestor y motor de base de datos y cuál es su función?</h3>
+    <h3 class="titulo3">¿Qué es un gestor y motor de base de datos y cuál es su función?</h3>
 
 
     </p>
     <aside>
-        <h3>¿Qué es un gestor de base de datos y cuál es su función?</h3>
-        <p>Un gestor de base de datos (DBMS, por sus siglas en inglés) es un software que permite crear, gestionar y
+        <h3 class="titulo4">¿Qué es un gestor de base de datos y cuál es su función?</h3>
+        <p class="parrafo1">Un gestor de base de datos (DBMS, por sus siglas en inglés) es un software que permite
+            crear, gestionar y
             manipular bases de datos. Su función principal es proporcionar una interfaz para que los usuarios puedan
             interactuar con los datos almacenados, facilitando tareas como la creación, lectura, actualización y
             eliminación de datos (CRUD). Además, un DBMS se encarga de garantizar la integridad, seguridad y
             consistencia de los datos, así como de gestionar el acceso concurrente por múltiples usuarios.</p>
-        <h3>¿Qué es un motor de base de datos y cuál es su función?</h3>
-        <p>Un motor de base de datos es el componente central de un sistema de gestión de bases de datos (DBMS) que se
+        <h3 class="titulo4">¿Qué es un motor de base de datos y cuál es su función?</h3>
+        <p class="parrafo1">Un motor de base de datos es el componente central de un sistema de gestión de bases de
+            datos (DBMS) que se
             encarga de ejecutar las operaciones relacionadas con el almacenamiento, recuperación y manipulación de
             datos. Su función principal es interpretar y procesar las consultas SQL (Structured Query Language) enviadas
             por los usuarios o aplicaciones, optimizando la ejecución de estas consultas para mejorar el rendimiento. El
