@@ -11,6 +11,7 @@ body {
     background: linear-gradient(90deg, #007bff, #0056b3);
     padding: 12px 0;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 #menu ul {
@@ -53,6 +54,7 @@ body {
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
+    cursor: pointer;
 }
 
 #menu ul li ul li ul {
@@ -65,6 +67,7 @@ body {
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
+    
 }
 
 #menu ul li ul li:hover > ul {

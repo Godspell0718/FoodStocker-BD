@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css.css">
-    <script defer src="dinamico.js"></script>
-    <title>FoodStocker DB</title>
+    <title>GESTOR DE BASE DE DATOS </title>
+    <link rel="stylesheet" href="./mas.css">
 </head>
 
+<body>
 
-<nav id="menu">
+   <nav id="menu">
         <ul>
             <li>
 
@@ -69,65 +69,34 @@
             <li><a href="../Mockups/mockups.html" class="menu-item">Mockups</a></li>
         </ul>
     </nav>
-<div>
-    <h1>
-        Diccionario de Base de datos de FOODSTOCKER
-    </h1>
-    <table id="tabla">
-        <thead>
-            <tr>
-                <th colspan="2">Diccionario de base de datos de FoodStocker</th>
-            </tr>
-        </thead>
-        <tr>
-            <td>Nombre</td>
-            <td class="tablafacil">Almacen</td>
-        </tr>
-        <tr>
-            <td>creación</td>
-            <td class="tablafacil">06/08/2025</td>
-        </tr>
-        <tr>
-            <td>Descripción</td>
-            <td class="tablafacil">Registro de Almacenes</td>
-        </tr>
+    <div class="container">
+        <h1>Bienvenido al Gestor de Base de Datos.</h1>
+    </div>
 
-    </table>
+    <p>
+    <h4>
+        AQUI RESPONDEREMOS LAS SIGUIENTES PREGUNTAS:
+    </h4>
 
-    <body>
-        <table class="tabla">
-            <thead>
-                <tr>
-                    <th>campo</th>
-                    <th>Tipo de dato</th>
-                    <th>Tamaño</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>WarehouseID</td>
-                    <td>INT</td>
-                    <td>1</td>
-                    <td>Es el identificador unico de cada bodega</td>
-                </tr>
-                <tr>
-                    <td>WarehouseName</td>
-                    <td>VARCAHR</td>
-                    <td>20</td>
-                    <td>Es el nombre del almacen</td>
-                </tr>
-                <tr>
-                    <td>WarehouseState</td>
-                    <td>VARCAHR</td>
-                    <td>10</td>
-                    <td>estado del almacen, activo o inactivo</td>
-                </tr>
-            </tbody>
+    <h3>¿Qué es un gestor de base de datos y cuál es su función?</h3>
+    <h3>¿Qué es un motor de base de datos y cuál es su función?</h3>
 
-        </table>
-    </body>
-</div>
-
+    </p>
+    <aside>
+        ¿Qué es un gestor de base de datos y cuál es su función?
+        <p>Un gestor de base de datos (DBMS, por sus siglas en inglés) es un software que permite crear, gestionar y
+            manipular bases de datos. Su función principal es proporcionar una interfaz para que los usuarios puedan
+            interactuar con los datos almacenados, facilitando tareas como la creación, lectura, actualización y
+            eliminación de datos (CRUD). Además, un DBMS se encarga de garantizar la integridad, seguridad y
+            consistencia de los datos, así como de gestionar el acceso concurrente por múltiples usuarios.</p>
+        ¿Qué es un motor de base de datos y cuál es su función?
+        <p>Un motor de base de datos es el componente central de un sistema de gestión de bases de datos (DBMS) que se
+            encarga de ejecutar las operaciones relacionadas con el almacenamiento, recuperación y manipulación de
+            datos. Su función principal es interpretar y procesar las consultas SQL (Structured Query Language) enviadas
+            por los usuarios o aplicaciones, optimizando la ejecución de estas consultas para mejorar el rendimiento. El
+            motor de base de datos también gestiona la estructura física de los datos en el almacenamiento, asegurando
+            que los datos se almacenen de manera eficiente y se puedan acceder rápidamente cuando sea necesario.</p>
+    </aside>
+</body>
 
 </html>
